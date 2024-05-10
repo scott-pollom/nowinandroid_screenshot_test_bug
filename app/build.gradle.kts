@@ -25,6 +25,7 @@ plugins {
     id("com.google.android.gms.oss-licenses-plugin")
     alias(libs.plugins.baselineprofile)
     alias(libs.plugins.roborazzi)
+    id("com.android.tools.preview.screenshot")
 }
 
 android {
@@ -69,6 +70,11 @@ android {
         }
     }
     namespace = "com.google.samples.apps.nowinandroid"
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.12"
+    }
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
+
 }
 
 dependencies {
@@ -131,6 +137,8 @@ dependencies {
     androidTestImplementation(libs.hilt.android.testing)
 
     baselineProfile(projects.benchmarks)
+
+    screenshotTestImplementation("androidx.compose.ui:ui-tooling")
 }
 
 baselineProfile {

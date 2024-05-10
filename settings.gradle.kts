@@ -17,6 +17,8 @@
 pluginManagement {
     includeBuild("build-logic")
     repositories {
+	maven { url = uri("/Users/spollom/Desktop/gmaven_repo") }
+        maven { url = uri("/Users/spollom/Desktop/preview_screenshot_maven_repo") }
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -26,6 +28,8 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+	maven { url = uri("/Users/spollom/Desktop/gmaven_repo") }
+        maven { url = uri("/Users/spollom/Desktop/preview_screenshot_maven_repo") }
         google()
         mavenCentral()
     }

@@ -48,6 +48,7 @@ plugins {
     alias(libs.plugins.secrets) apply false
     alias(libs.plugins.room) apply false
     alias(libs.plugins.module.graph) apply true // Plugin applied to allow module graph generation
+    id("com.android.tools.preview.screenshot") version "0.0.1-alpha01" apply false
 }
 
 // Task to print all the module paths in the project e.g. :core:data
